@@ -4,10 +4,12 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
 from stack_api import settings
-from main.views import ProblemViewsSet
+from main.views import *
 
 router = DefaultRouter()
 router.register('problems', ProblemViewsSet)
+router.register('replies', ReplyViewSet)
+router.register('comments', CommentViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
