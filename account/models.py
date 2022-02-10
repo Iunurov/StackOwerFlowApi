@@ -33,7 +33,7 @@ class CustomUser(AbstractUser):
     phone_number = PhoneNumberField(unique=True)
     username = models.CharField(max_length=155, unique=True)
     is_active = models.BooleanField(default=False)
-    activation_cod = models.CharField(max_length=6, blank=True)
+    activation_code = models.CharField(max_length=6, blank=True)
 
     objects = CustomUserManager()
 
